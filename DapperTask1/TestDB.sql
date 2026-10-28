@@ -1,0 +1,12 @@
+﻿IF DB_ID('TestDB') IS NULL
+    CREATE DATABASE TestDB;
+GO
+USE TestDB;
+GO
+IF OBJECT_ID('Users', 'U') IS NULL
+CREATE TABLE Users (
+    Id    INT PRIMARY KEY IDENTITY(1,1),
+    Name  NVARCHAR(100),
+    Email NVARCHAR(100),
+    Age   INT
+);
